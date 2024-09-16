@@ -171,10 +171,10 @@ pub struct TypeAndId {
     /// Entity typename
     #[cfg_attr(feature = "wasm", tsify(type = "string"))]
     #[serde(rename = "type")]
-    entity_type: SmolStr,
+    pub entity_type: SmolStr,
     /// Entity id
     #[cfg_attr(feature = "wasm", tsify(type = "string"))]
-    id: SmolStr,
+    pub id: SmolStr,
 }
 
 impl From<EntityUID> for TypeAndId {

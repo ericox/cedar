@@ -239,6 +239,14 @@ impl Policy {
             conditions,
         ))
     }
+
+    pub fn action_constraint(&self) -> &ActionConstraint {
+        &self.action
+    }
+
+    pub fn conditions(&self) -> &Vec<Clause> {
+        &self.conditions
+    }
 }
 
 impl Clause {
